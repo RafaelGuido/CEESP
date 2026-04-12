@@ -1,0 +1,199 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Sobre — CEESP">
+  <!-- Hero -->
+  <section class="relative overflow-hidden">
+    <img src="/img/office.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900/90 to-navy-700/70"></div>
+    <div class="relative max-w-5xl mx-auto px-6 py-28 md:py-36 text-white">
+      <p class="uppercase tracking-widest text-gold-400 text-sm font-semibold mb-4">Sobre nós</p>
+      <h1 class="font-display text-4xl md:text-5xl font-bold">Conheça o CEESP</h1>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="py-20 md:py-24 bg-white">
+    <div class="max-w-4xl mx-auto px-6">
+      <blockquote class="border-l-4 border-navy-500 pl-6 text-xl md:text-2xl text-slate-700 leading-relaxed italic">
+        "O CEESP foi criado para atuar no segmento da educação de pessoas com deficiências com uma
+        proposta diferenciada, qualificando-as para o mercado de trabalho e preparando professores
+        da rede pública do DF para o trabalho com esse público especial."
+      </blockquote>
+
+      <div class="mt-12 space-y-6 text-lg leading-relaxed text-slate-700">
+        <p>
+          A partir de <strong>2009</strong>, e dentro de suas atribuições estatutárias como entidade
+          do Terceiro Setor, desmembrou suas atividades no intuito de atender à demanda da sociedade,
+          especialmente no tocante ao desenvolvimento de Projetos de interesse dos Governos Federal,
+          Estadual e Municipal.
+        </p>
+        <p>
+          Alterou seu Estatuto Social e sua Razão Social para se disponibilizar ao segmento
+          Governamental, cumprindo suas funções de intermediação entre esse segmento e o Setor Privado.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Objetivos -->
+  <section class="py-20 md:py-24 bg-slate-50">
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-navy-600 font-semibold text-sm uppercase tracking-widest">Missão</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-slate-900 mt-3">
+          Objetivos Atuais
+        </h2>
+      </div>
+
+      <div class="bg-white rounded-2xl border border-slate-200 p-8 md:p-12">
+        <p class="text-lg leading-relaxed text-slate-700">
+          Em suas finalidades estão caracterizadas a <strong>assessoria</strong>, a
+          <strong>consultoria</strong>, a <strong>execução</strong>, o <strong>conveniamento</strong>
+          e a <strong>parceria</strong> para o desenvolvimento e a gestão de projetos e programas,
+          consignados através de propostas e planos de trabalho apresentados em parceria com os entes
+          federados para, com qualidade e responsabilidade civil, executar ações necessárias ao
+          atendimento de demandas da população em todas as partes do Brasil.
+        </p>
+      </div>
+
+      <div class="mt-10 grid gap-6 md:grid-cols-5 text-center">
+        {['Assessoria', 'Consultoria', 'Execução', 'Conveniamento', 'Parceria'].map((item) => (
+          <div class="bg-white rounded-xl border border-slate-200 py-6 px-4">
+            <p class="font-display font-semibold text-navy-700">{item}</p>
+          </div>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Galeria -->
+  <section class="py-20 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Galeria</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mt-3">
+          Algumas imagens de eventos realizados
+        </h2>
+      </div>
+
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {[
+          '/img/galeria-330dcae8.jpg',
+          '/img/galeria-7683b575.jpg',
+          '/img/galeria-7b3d3d15.jpg',
+          '/img/galeria-c6c2c48a.jpg',
+        ].map((src) => (
+          <button
+            type="button"
+            data-lightbox-src={src}
+            class="group relative aspect-square overflow-hidden rounded-2xl ring-1 ring-slate-200 cursor-zoom-in focus:outline-none focus:ring-2 focus:ring-navy-500"
+          >
+            <img src={src} alt="Evento CEESP" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900/30 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+          </button>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div
+    id="lightbox"
+    class="fixed inset-0 z-[100] hidden items-center justify-center bg-black/90 backdrop-blur-sm p-4 cursor-zoom-out"
+    role="dialog"
+    aria-modal="true"
+    aria-label="Imagem ampliada"
+  >
+    <button
+      id="lightbox-close"
+      type="button"
+      aria-label="Fechar"
+      class="absolute top-4 right-4 w-11 h-11 rounded-full bg-white/10 hover:bg-white/20 text-white flex items-center justify-center transition-colors"
+    >
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    </button>
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-lg shadow-2xl" />
+  </div>
+
+  <script>
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img') as HTMLImageElement | null;
+    const closeBtn = document.getElementById('lightbox-close');
+
+    const open = (src: string) => {
+      if (!lightbox || !lightboxImg) return;
+      lightboxImg.src = src;
+      lightbox.classList.remove('hidden');
+      lightbox.classList.add('flex');
+      document.body.style.overflow = 'hidden';
+    };
+    const close = () => {
+      if (!lightbox || !lightboxImg) return;
+      lightbox.classList.add('hidden');
+      lightbox.classList.remove('flex');
+      lightboxImg.src = '';
+      document.body.style.overflow = '';
+    };
+
+    document.querySelectorAll<HTMLElement>('[data-lightbox-src]').forEach((el) => {
+      el.addEventListener('click', () => open(el.dataset.lightboxSrc || ''));
+    });
+
+    lightbox?.addEventListener('click', (e) => {
+      if (e.target === lightbox) close();
+    });
+    closeBtn?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      close();
+    });
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') close();
+    });
+  </script>
+
+  <!-- Siga-nos -->
+  <section class="py-20 md:py-24 bg-slate-50">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <p class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Redes sociais</p>
+      <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mt-3">Siga-nos</h2>
+      <p class="text-slate-600 mt-4">
+        Acompanhe nossos projetos, eventos e ações pelas redes sociais.
+      </p>
+
+      <div class="mt-8 flex flex-wrap justify-center gap-4">
+        {[
+          { name: 'Facebook', href: '#', icon: 'M22 12a10 10 0 10-11.56 9.88v-6.99h-2.54V12h2.54V9.8c0-2.51 1.49-3.89 3.77-3.89 1.09 0 2.24.19 2.24.19v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0022 12z' },
+          { name: 'Instagram', href: '#', icon: 'M12 2.2c3.2 0 3.58 0 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s0 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58 0-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 01-1.38-.9 3.7 3.7 0 01-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.2 15.58 2.2 15.2 2.2 12s0-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.2 8.8 2.2 12 2.2zm0 5.6a4.2 4.2 0 100 8.4 4.2 4.2 0 000-8.4zm0 6.93a2.73 2.73 0 110-5.46 2.73 2.73 0 010 5.46zm5.35-7.1a.98.98 0 11-1.96 0 .98.98 0 011.96 0z' },
+          { name: 'YouTube', href: '#', icon: 'M23.5 6.2a3 3 0 00-2.12-2.12C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.38.48A3 3 0 00.5 6.2C0 8.08 0 12 0 12s0 3.92.5 5.8a3 3 0 002.12 2.12C4.5 20.4 12 20.4 12 20.4s7.5 0 9.38-.48a3 3 0 002.12-2.12C24 15.92 24 12 24 12s0-3.92-.5-5.8zM9.6 15.6V8.4l6.24 3.6-6.24 3.6z' },
+        ].map((s) => (
+          <a
+            href={s.href}
+            aria-label={s.name}
+            class="inline-flex items-center justify-center w-12 h-12 rounded-full bg-white border border-slate-200 text-navy-700 hover:bg-navy-700 hover:text-white hover:border-navy-700 transition-colors"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+              <path d={s.icon} />
+            </svg>
+          </a>
+        ))}
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="py-20 bg-navy-800 text-white">
+    <div class="max-w-4xl mx-auto px-6 text-center">
+      <h2 class="font-display text-3xl md:text-4xl font-bold">CEESP: Ajudando o Brasil a Crescer</h2>
+      <a
+        href="/contato"
+        class="mt-8 inline-flex items-center rounded-full bg-gold-400 text-navy-900 font-semibold px-8 py-3 hover:bg-gold-500 transition-colors"
+      >
+        Fale Conosco
+      </a>
+    </div>
+  </section>
+</Layout>

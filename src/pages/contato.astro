@@ -1,0 +1,112 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Contato — CEESP">
+  <section class="relative overflow-hidden">
+    <img src="/img/office.jpg" alt="" class="absolute inset-0 w-full h-full object-cover" />
+    <div class="absolute inset-0 bg-gradient-to-br from-navy-900/90 to-navy-700/70"></div>
+    <div class="relative max-w-5xl mx-auto px-6 py-24 md:py-32 text-white">
+      <p class="uppercase tracking-widest text-gold-400 text-sm font-semibold mb-4">Contato</p>
+      <h1 class="font-display text-4xl md:text-5xl font-bold">Fale conosco</h1>
+      <p class="mt-4 text-navy-50/90 text-lg max-w-2xl">
+        Estamos à disposição para parcerias, projetos e esclarecimentos.
+      </p>
+    </div>
+  </section>
+
+  <section class="py-20 md:py-24 bg-white">
+    <div class="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-5">
+      <!-- Info -->
+      <div class="lg:col-span-2 space-y-8">
+        <div>
+          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Horário de funcionamento</h2>
+          <p class="text-slate-600 leading-relaxed">
+            De Segunda a Sexta<br />
+            das <strong>09:00 às 18:00</strong>
+          </p>
+          <p class="mt-2 text-sm text-navy-700 font-semibold">Mediante agendamento prévio.</p>
+        </div>
+
+        <div class="border-t border-slate-200 pt-8">
+          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Endereço</h2>
+          <address class="not-italic text-slate-600 leading-relaxed">
+            Av. Castanheiras com Rua 30 Norte, Lote 4<br />
+            3º Andar — Sala 3 — Águas Claras<br />
+            Brasília, Distrito Federal<br />
+            71.919-980
+          </address>
+        </div>
+
+        <div class="border-t border-slate-200 pt-8">
+          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Telefones</h2>
+          <p class="text-slate-600 space-y-1">
+            <a href="tel:+556141032377" class="block text-navy-600 hover:text-navy-700 font-medium">(61) 4103-2377</a>
+            <a href="tel:+5561981458414" class="block text-navy-600 hover:text-navy-700 font-medium">(61) 98145-8414</a>
+          </p>
+        </div>
+
+        <div class="border-t border-slate-200 pt-8">
+          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">E-mail</h2>
+          <a href="mailto:ceesp.ceesp@gmail.com" class="text-navy-600 hover:text-navy-700 font-medium">
+            ceesp.ceesp@gmail.com
+          </a>
+        </div>
+
+      </div>
+
+      <!-- Form -->
+      <form
+        class="lg:col-span-3 bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-10 space-y-5"
+        action="mailto:ceesp.ceesp@gmail.com"
+        method="post"
+        enctype="text/plain"
+      >
+        <h2 class="font-display text-2xl font-bold text-slate-900">Envie uma mensagem</h2>
+        <p class="text-slate-600 text-sm">
+          Preencha o formulário abaixo e retornaremos em até 24 horas úteis.
+        </p>
+
+        <div class="grid gap-5 md:grid-cols-2">
+          <label class="block">
+            <span class="text-sm font-semibold text-slate-700">Nome</span>
+            <input type="text" name="nome" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
+          </label>
+          <label class="block">
+            <span class="text-sm font-semibold text-slate-700">Sobrenome</span>
+            <input type="text" name="sobrenome" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
+          </label>
+        </div>
+
+        <label class="block">
+          <span class="text-sm font-semibold text-slate-700">Seu e-mail</span>
+          <input type="email" name="email" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
+        </label>
+
+        <label class="block">
+          <span class="text-sm font-semibold text-slate-700">Assunto</span>
+          <input type="text" name="assunto" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
+        </label>
+
+        <label class="block">
+          <span class="text-sm font-semibold text-slate-700">Sua mensagem</span>
+          <textarea name="mensagem" rows="5" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none resize-y"></textarea>
+        </label>
+
+        <label class="flex items-start gap-3 text-sm text-slate-600">
+          <input type="checkbox" required class="mt-1 rounded border-slate-300 text-navy-600 focus:ring-navy-500" />
+          <span>
+            Ao selecionar esta caixa e enviar seus dados, você nos autoriza a te enviar e-mails. Você pode cancelar a qualquer momento.
+          </span>
+        </label>
+
+        <button
+          type="submit"
+          class="w-full md:w-auto inline-flex justify-center items-center rounded-full bg-navy-600 text-white font-semibold px-8 py-3 hover:bg-navy-700 transition-colors"
+        >
+          Enviar mensagem
+        </button>
+      </form>
+    </div>
+  </section>
+</Layout>
