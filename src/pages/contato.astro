@@ -16,19 +16,68 @@ import Layout from '../layouts/Layout.astro';
   </section>
 
   <section class="py-20 md:py-24 bg-white">
-    <div class="max-w-6xl mx-auto px-6 grid gap-12 lg:grid-cols-5">
-      <!-- Info -->
-      <div class="lg:col-span-2 space-y-8">
-        <div>
-          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Horário de funcionamento</h2>
-          <p class="text-slate-600 leading-relaxed">
-            De Segunda a Sexta<br />
-            das <strong>09:00 às 18:00</strong>
-          </p>
-          <p class="mt-2 text-sm text-navy-700 font-semibold">Mediante agendamento prévio.</p>
-        </div>
+    <div class="max-w-5xl mx-auto px-6">
+      <div class="text-center mb-12">
+        <p class="text-gold-600 font-semibold text-sm uppercase tracking-widest">Fale conosco</p>
+        <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mt-3">
+          Escolha o canal de sua preferência
+        </h2>
+        <p class="text-slate-600 mt-4 max-w-2xl mx-auto">
+          Estamos à disposição para parcerias, projetos e esclarecimentos. Retornamos em até 24 horas úteis.
+        </p>
+      </div>
 
-        <div class="border-t border-slate-200 pt-8">
+      <div class="grid gap-6 md:grid-cols-3">
+        <a
+          href="https://wa.me/5561981458414?text=Ol%C3%A1%2C%20gostaria%20de%20falar%20com%20o%20CEESP."
+          target="_blank"
+          rel="noopener"
+          class="group rounded-2xl border border-slate-200 bg-white p-8 text-center hover:border-navy-400 hover:shadow-xl transition-all"
+        >
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-green-50 text-green-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.47 14.38c-.3-.15-1.77-.87-2.04-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.26-.46-2.4-1.48-.89-.79-1.48-1.77-1.66-2.07-.17-.3-.02-.46.13-.61.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.06 2.87 1.21 3.07.15.2 2.1 3.2 5.08 4.49.71.31 1.26.49 1.69.63.71.22 1.36.19 1.87.12.57-.08 1.77-.72 2.02-1.42.25-.7.25-1.3.17-1.42-.07-.13-.27-.2-.57-.35M12.04 21.5h-.01a9.5 9.5 0 01-4.83-1.32l-.35-.21-3.58.94.96-3.49-.23-.36A9.45 9.45 0 012.54 12c0-5.23 4.27-9.48 9.5-9.48a9.42 9.42 0 016.72 2.78 9.42 9.42 0 012.78 6.7c0 5.23-4.27 9.48-9.5 9.48M20.52 3.45A11.4 11.4 0 0012.04.5C5.75.5.64 5.61.64 11.9c0 2.01.52 3.97 1.52 5.7L.5 23.5l6.08-1.59a11.4 11.4 0 005.45 1.39h.01c6.28 0 11.4-5.11 11.4-11.4 0-3.05-1.19-5.91-3.35-8.06" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-navy-900">WhatsApp</h3>
+          <p class="text-slate-600 text-sm mt-2">(61) 98145-8414</p>
+          <span class="inline-block mt-4 text-sm font-semibold text-navy-700 group-hover:text-navy-900">
+            Abrir conversa →
+          </span>
+        </a>
+
+        <a
+          href="mailto:ceesp.ceesp@gmail.com"
+          class="group rounded-2xl border border-slate-200 bg-white p-8 text-center hover:border-navy-400 hover:shadow-xl transition-all"
+        >
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-gold-50 text-gold-600 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-navy-900">E-mail</h3>
+          <p class="text-slate-600 text-sm mt-2 break-all">ceesp.ceesp@gmail.com</p>
+          <span class="inline-block mt-4 text-sm font-semibold text-navy-700 group-hover:text-navy-900">
+            Enviar e-mail →
+          </span>
+        </a>
+
+        <a
+          href="tel:+556141032377"
+          class="group rounded-2xl border border-slate-200 bg-white p-8 text-center hover:border-navy-400 hover:shadow-xl transition-all"
+        >
+          <div class="inline-flex items-center justify-center w-14 h-14 rounded-full bg-navy-50 text-navy-700 mb-4">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-7 h-7" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.8" d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.7 2.793a2 2 0 01-.45 1.84L8.09 10.91a16 16 0 006 6l1.76-1.38a2 2 0 011.84-.45l2.79.7A2 2 0 0121 17.72V20a2 2 0 01-2 2h-1C9.7 22 2 14.3 2 5V4" />
+            </svg>
+          </div>
+          <h3 class="font-display text-lg font-bold text-navy-900">Telefone</h3>
+          <p class="text-slate-600 text-sm mt-2">(61) 4103-2377</p>
+        </a>
+      </div>
+
+      <div class="mt-16 grid gap-8 md:grid-cols-2 border-t border-slate-200 pt-12">
+        <div>
           <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Endereço</h2>
           <address class="not-italic text-slate-600 leading-relaxed">
             Av. Castanheiras com Rua 30 Norte, Lote 4<br />
@@ -37,76 +86,15 @@ import Layout from '../layouts/Layout.astro';
             71.919-980
           </address>
         </div>
-
-        <div class="border-t border-slate-200 pt-8">
-          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Telefones</h2>
-          <p class="text-slate-600 space-y-1">
-            <a href="tel:+556141032377" class="block text-navy-600 hover:text-navy-700 font-medium">(61) 4103-2377</a>
-            <a href="tel:+5561981458414" class="block text-navy-600 hover:text-navy-700 font-medium">(61) 98145-8414</a>
+        <div>
+          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">Horário de funcionamento</h2>
+          <p class="text-slate-600 leading-relaxed">
+            De Segunda a Sexta<br />
+            das <strong>09:00 às 18:00</strong>
           </p>
+          <p class="mt-2 text-sm text-navy-700 font-semibold">Mediante agendamento prévio.</p>
         </div>
-
-        <div class="border-t border-slate-200 pt-8">
-          <h2 class="font-display text-xl font-bold text-slate-900 mb-3">E-mail</h2>
-          <a href="mailto:ceesp.ceesp@gmail.com" class="text-navy-600 hover:text-navy-700 font-medium">
-            ceesp.ceesp@gmail.com
-          </a>
-        </div>
-
       </div>
-
-      <!-- Form -->
-      <form
-        class="lg:col-span-3 bg-slate-50 border border-slate-200 rounded-2xl p-8 md:p-10 space-y-5"
-        action="mailto:ceesp.ceesp@gmail.com"
-        method="post"
-        enctype="text/plain"
-      >
-        <h2 class="font-display text-2xl font-bold text-slate-900">Envie uma mensagem</h2>
-        <p class="text-slate-600 text-sm">
-          Preencha o formulário abaixo e retornaremos em até 24 horas úteis.
-        </p>
-
-        <div class="grid gap-5 md:grid-cols-2">
-          <label class="block">
-            <span class="text-sm font-semibold text-slate-700">Nome</span>
-            <input type="text" name="nome" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
-          </label>
-          <label class="block">
-            <span class="text-sm font-semibold text-slate-700">Sobrenome</span>
-            <input type="text" name="sobrenome" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
-          </label>
-        </div>
-
-        <label class="block">
-          <span class="text-sm font-semibold text-slate-700">Seu e-mail</span>
-          <input type="email" name="email" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
-        </label>
-
-        <label class="block">
-          <span class="text-sm font-semibold text-slate-700">Assunto</span>
-          <input type="text" name="assunto" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none" />
-        </label>
-
-        <label class="block">
-          <span class="text-sm font-semibold text-slate-700">Sua mensagem</span>
-          <textarea name="mensagem" rows="5" required class="mt-1 w-full rounded-lg border border-slate-300 bg-white px-4 py-2.5 focus:border-navy-500 focus:ring-2 focus:ring-navy-200 outline-none resize-y"></textarea>
-        </label>
-
-        <label class="flex items-start gap-3 text-sm text-slate-600">
-          <input type="checkbox" required class="mt-1 rounded border-slate-300 text-navy-600 focus:ring-navy-500" />
-          <span>
-            Ao selecionar esta caixa e enviar seus dados, você nos autoriza a te enviar e-mails. Você pode cancelar a qualquer momento.
-          </span>
-        </label>
-
-        <button
-          type="submit"
-          class="w-full md:w-auto inline-flex justify-center items-center rounded-full bg-navy-600 text-white font-semibold px-8 py-3 hover:bg-navy-700 transition-colors"
-        >
-          Enviar mensagem
-        </button>
-      </form>
     </div>
   </section>
 </Layout>
