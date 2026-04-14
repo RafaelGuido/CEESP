@@ -1,6 +1,6 @@
 # CEESP
 
-Site institucional do **CEESP — Centro de Estudos Especiais e Desenvolvimento de Projetos e Pesquisas**, OSCIP sediada em Brasília/DF.
+Site institucional do **CEESP — Centro de Estudos Especiais e Desenvolvimento de Projetos e Pesquisas**.
 
 Construído com [Astro](https://astro.build) + [Tailwind CSS](https://tailwindcss.com).
 
@@ -36,5 +36,4 @@ public/
 
 ## Contato
 
-Av. Castanheiras com Rua 30 Norte, Lote 4 — 3º Andar, Sala 3 — Águas Claras, Brasília/DF — 71.919-980
-(61) 4103-2377 · (61) 98145-8414 · ceesp.ceesp@gmail.com
+(61) 4103-2377 · ceesp.ceesp@gmail.com
