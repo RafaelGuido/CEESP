@@ -129,19 +129,9 @@ const projects = [
         <h2 class="font-display text-3xl md:text-4xl font-bold text-navy-900 mt-3">
           Alguns Projetos Recentes
         </h2>
-        <a
-          href="/docs/portfolio-ceesp.pdf"
-          target="_blank"
-          rel="noopener"
-          class="group inline-flex items-center gap-2 mt-4 text-slate-600 hover:text-navy-800 transition-colors"
-        >
-          <span class="underline decoration-gold-400 decoration-2 underline-offset-4">
-            Breve descrição de alguns projetos executados e em execução.
-          </span>
-          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 opacity-70 group-hover:opacity-100" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-          </svg>
-        </a>
+        <p class="mt-4 text-slate-600">
+          Breve descrição de alguns projetos executados e em execução.
+        </p>
       </div>
 
       <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -193,13 +183,13 @@ const projects = [
           Eventos e parcerias institucionais
         </h2>
         <p class="text-slate-600 mt-5 leading-relaxed">
-          O CEESP realiza eventos culturais em parceria com instituições como
-          <strong>Setor</strong>, <strong>IPHAN</strong>, <strong>Secretaria de Turismo</strong> e o
-          <strong>Governo do Distrito Federal</strong>, promovendo cultura, inclusão e valorização
-          das identidades locais.
+          O CEESP realiza eventos culturais, educacionais e científicos em parceria com instituições como
+          <strong>Secretaria de Cultura</strong>, <strong>Secretaria de Turismo</strong>,
+          <strong>Secretaria de Educação</strong>, <strong>Secretaria de Saúde</strong>,
+          <strong>Universidade de Brasília</strong> e o <strong>Governo do Distrito Federal</strong>.
         </p>
         <div class="mt-6 flex flex-wrap gap-2">
-          {['Setor', 'IPHAN', 'Sec. Turismo', 'GDF'].map((s) => (
+          {['Sec. Cultura', 'Sec. Turismo', 'Sec. Educação', 'Sec. Saúde', 'UnB', 'GDF'].map((s) => (
             <span class="inline-flex items-center rounded-full border border-navy-200 bg-navy-50 text-navy-800 text-xs font-semibold px-3 py-1">
               {s}
             </span>
